@@ -42,10 +42,11 @@ const Router = () => {
 
     return (
         <Switch>
-            <Route path="/login" component={Login} />
             <Route path="/listings" component={Listings} />
+            <Route path="/login" component={Login} />
+            
             <Route path='/details/:id' component={Details} />
-            <ProtectedRoute exact path="/" component={Listings} />
+            <Route path="/" component={Listings} />
             
             <ProtectedRoute path="/add" history={history} component={AddListing} />
         </Switch>

@@ -22,7 +22,10 @@ const Navigation = (props) => {
     
     const logout = () => {
         document.cookie = "loggedIn=;expires=Thu, 01 Jan 1970 00:00:00 GMT"
-        window.location.replace("/login")
+        
+        if(loggedIn) {
+            window.location.replace("/login")
+        }
     }
 
 
