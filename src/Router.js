@@ -46,7 +46,7 @@ const Router = () => {
             <Route path="/login" component={Login} />
             
             <Route path='/details/:id' component={Details} />
-            <Route path="/" component={Listings} />
+            <Route exact path="/" component={Listings} />
             
             <ProtectedRoute path="/add" history={history} component={AddListing} />
         </Switch>
