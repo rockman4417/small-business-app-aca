@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { AppBar, Toolbar, 
-    Typography } from '@material-ui/core'
+    Typography, Button } from '@material-ui/core'
 
 import { Link } from 'react-router-dom'
 import cookie from 'cookie'
@@ -41,18 +41,18 @@ const Navigation = (props) => {
                     <Typography variant="h6" style={{ flexGrow: "1" }}>
                         Lubbock Small Business
                     </Typography>
-                    <ul className="nav-list">
+                    <ul className="nav-list" style={{listStyleType: "none", display: "flex"}}>
                         <li className="nav-list-item">
-                            <Link to="/login" onClick={logout}>{loggedIn ? "Logout" : "Login"}</Link>
-                        </li>
-                        <li className="nav-list-item">
-                            <Link to="/listings">Listings</Link>
+                            <Link to="/listings" style={{ textDecoration: 'none', color: "white"  }}><Button color="inherit">Listings</Button></Link>
                         </li>
                         {loggedIn ? 
                         <li className="nav-list-item">
-                            <Link to="/add">Add</Link>
+                            <Link to="/add" style={{ textDecoration: 'none', color: "white" }}><Button color="inherit">Add</Button></Link>
                         </li>  
                         : null}
+                        <li className="nav-list-item">
+                            <Link to="/login" onClick={logout} style={{ textDecoration: 'none', color: "white"  }}><Button color="inherit" >{loggedIn ? "Logout" : "Login"}</Button></Link>
+                        </li>
                     </ul>
                 </Toolbar>
             </AppBar>

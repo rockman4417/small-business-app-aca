@@ -44,7 +44,7 @@ const Dashboard = (props) => {
                 {props.listings.map((listing, idx) => (
                     <TableRow key={idx}>
                         <TableCell>
-                            <Link to={`/details/${listing.id}`}>{listing["name"]}</Link>
+                            <Link to={`/details/${listing.id}`} style={{ textDecoration: 'none' }}>{listing["name"]}</Link>
                             
                             </TableCell>
                         <TableCell>{listing["description"]}</TableCell>
