@@ -53,7 +53,7 @@ const Dashboard = (props) => {
                         {loggedIn ? <TableCell>
                             <DeleteIcon
                                 onClick={() => props.removeListing(idx)}
-                                className="icon text-red" />
+                                className="icon text-red" /> 
                         </TableCell> : null}
                     </TableRow>
                 ))}
